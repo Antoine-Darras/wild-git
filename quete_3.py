@@ -39,6 +39,7 @@ if st.session_state["authentication_status"]:
 
     # Menu latéral
     with st.sidebar:
+        st.success(f"Bienvenue {st.session_state['name']} 👋")
         selection_menu = option_menu(
             menu_title=None,
             options=["Accueil", "Gif de Michael Scott"],
@@ -47,7 +48,6 @@ if st.session_state["authentication_status"]:
         )
 
     # Contenu principal
-    st.success(f"Bienvenue {st.session_state['name']} 👋")
 
     if selection_menu == "Accueil":
         st.title("Bienvenue sur ma page !")
